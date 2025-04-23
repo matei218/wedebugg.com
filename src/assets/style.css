@@ -1,0 +1,123 @@
+/* Gaegu - Regular */
+@font-face {
+  font-family: 'Gaegu';
+  src: url('/src/assets/fonts/gaegu/Gaegu-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Rubik Doodle Shadow - Regular */
+@font-face {
+  font-family: 'Rubik Doodle Shadow';
+  src: url('/src/assets/fonts/rubik-doodle-shadow/RubikDoodleShadow-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+    /* Color Palette */
+    --primary-color: #222; /* Dark text color */
+    --background-color: #f9f9f9; /* Light background color */
+    --link-color: #0066cc; /* Link color */
+    --link-hover-color: #004d99; /* Link hover color */
+    --border-color: #ccc; /* Border color */
+    --text-color: #222; /* Default text color */
+    
+    /* Spacing */
+    --base-spacing: 1rem;
+    --small-spacing: 0.75rem;
+    --extra-small-spacing: 0.5rem;
+  
+    /* Font */
+    --font-main: 'Gaegu', sans-serif;
+    --font-title: 'Rubik Doodle Shadow', system-ui;
+    
+    /* Layout */
+    --max-width: 1240px;
+    --header-footer-padding: 1rem;
+    --mobile-padding: 0.75rem;
+    --ultra-small-padding: 0.5rem;
+  
+    /* Print */
+    --print-background-color: white;
+    --print-text-color: black;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+    font-family: var(--font-main);
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  header, main, footer {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--base-spacing);
+  }
+  
+  /* main */
+  .main-logo{
+    font-family: var(--font-title);
+  }
+
+  .main-logo::before{
+    content: 'Wedebugg';
+  }
+
+  @media (max-width: 768px) {
+    header, main, footer {
+      padding: var(--mobile-padding);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header, main, footer {
+      padding: var(--ultra-small-padding);
+    }
+  }
+  
+  @media screen and (orientation: landscape) {
+    body {
+      justify-content: center;
+      padding: 2vh;
+    }
+  }
+  
+  @media print {
+    body {
+      background: var(--print-background-color);
+      color: var(--print-text-color);
+    }
+  
+    header, main, footer {
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+  
+    /*
+        nav, footer {
+        display: none;
+        }
+    */
+  }
+  

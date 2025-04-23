@@ -1,0 +1,1 @@
+document.getElementById("main-js").textContent = "✨ Hello from external Vanilla JS!";

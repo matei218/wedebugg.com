@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://unpkg.com https://kit.fontawesome.com 'unsafe-eval' 'unsafe-inline';
+    style-src 'self' https://fonts.googleapis.com https://ka-f.fontawesome.com 'unsafe-inline';
+    font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com data:;
+    connect-src 'self' https://ka-f.fontawesome.com;
+    img-src 'self' data: https:;
+  ">
+  <title>Wedebugg.com</title>
+  <link rel="stylesheet" href="/src/assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/bc14d1ea95.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="header"></div>
+    </header>
+    <main>
+        <div id="main-section" data-section-name="welcome">
+            <section class="inner-section">
+                <div class="main-logo"></div>
+                <div class="side-logo"></div>
+                <div class="motto"></div>
+            </section>
+            <aside class="inner-side"></aside>
+        </div>
+        <div id="main-section" data-section-name="about">
+            <section class="inner-section"></section>
+            <aside class="inner-side"></aside>
+        </div>
+        <div id="main-section" data-section-name="workflow">
+            <section class="inner-section">
+                <div id="main-js"></div>
+                <div id="main-ts"></div>
+            </section>
+            <aside class="inner-side"></aside>
+        </div>
+        <div id="main-section" data-section-name="examples">
+            <section class="inner-section">
+                <div id="vue-app"></div>
+            </section>
+            <aside class="inner-side"></aside>
+        </div>
+        <div id="main-section" data-section-name="team">
+            <section class="inner-section">
+                <div id="react-app"></div>
+            </section>
+            <aside class="inner-side"></aside>
+        </div>
+        <div id="main-section" data-section-name="contact">
+            <section class="inner-section"></section>
+            <aside class="inner-side"></aside>
+        </div>
+    </main>
+    <footer></footer>
+
+  <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.prod.js" 
+          integrity="sha384-QLgwzsuau/sa8LhRgjRzkvQS0LyUzCM2B8FPwVoSu1KDel940/orifPaumNXp9hK" 
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"
+          integrity="sha384-tMH8h3BGESGckSAVGZ82T9n90ztNXxvdwvdM6UoR56cYcf+0iGXBliJ29D+wZ/x8" 
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"
+          integrity="sha384-bm7MnzvK++ykSwVJ2tynSE5TRdN+xL418osEVF2DE/L/gfWHj91J2Sphe582B1Bh" 
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.22.5/babel.min.js"
+          integrity="sha384-o3/mhZbqXxfNuwwZUJpjhSXgLq4jRpjLqQzNT5VWIsQyWEechXy70AtNM9MpNNeC" 
+          crossorigin="anonymous"></script>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/vue/app.js"></script>
+
+  <script type="text/babel" data-type="module" data-presets="react,typescript" src="/src/react/App.tsx"></script>
+  <script type="text/babel" data-type="module" data-presets="typescript" src="/src/ts/main.ts"></script>
+</body>
+</html> 
